@@ -14,7 +14,6 @@ logging.basicConfig(filename='log/programlog.log', level=logging.DEBUG, encoding
 from rclone_python import rclone  # Import the rclone module
 
 logger = logging.getLogger(__name__)
-# ----------------------------------------------
 
 from icecream import ic # Outil de debug
 ## Paramétrage d'icecream -----------------------
@@ -23,12 +22,11 @@ ic.configureOutput(prefix=f'IC Debug | ', includeContext=True)
 
 
 def main():
-    #logging.basicConfig(filename='log/programlog.txt', level=logging.DEBUG, encoding='utf-8', format=' %(asctime)s - %(levelname)s -  %(message)s')
-    #logging.debug("-- Démarrage traitement")
+    
     ic("Hello")
     
-    logger.debug('-----------------------------------------------------------')
-    logger.debug('------- Lancement du programme ----------------------------')
+    logger.info('-----------------------------------------------------------')
+    logger.info('------- Lancement du programme ----------------------------')
     
     if  is_rclone_installed()  is False: # Check if rclone is installed
         print("Rclone n'est pas installé !")
@@ -49,6 +47,4 @@ def is_rclone_installed(): # Check if rclone is installed
         return False
 
 if __name__ == "__main__":
-    #logger = logging.getLogger(__name__)
-    #logger.debug('---- Démarrage programme ----------------------------')
-    main()
+        main()
