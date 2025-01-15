@@ -1,6 +1,9 @@
 ## Exemple de Stackoverflow:  https://stackoverflow.com/questions/75220524/python-cli-menu-with-arrow-keys-on-windows
 # Avec ajout RCLONE
 
+import subprocess
+""" import asyncio
+asyncio.set_event_loop_policy(asyncio.WindowsSelectorEventLoopPolicy()) """
 
 from InquirerPy import inquirer  # Import the inquirer module
 #from rclone_python import rclone  # Import the rclone module  !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
@@ -20,6 +23,18 @@ from icecream import ic # Outil de debug
 ic.configureOutput(prefix=f'IC Debug | ', includeContext=True)
 #------------------------------------------------
 
+import time
+import sys
+#------------------------------------------------
+def progress_bar():
+    total = 100  
+    for i in range(total + 1):
+        bar = "#" * (i // 2) + "-" * (50 - i // 2)
+        sys.stdout.write(f"\r[{bar}] {i}%")
+        sys.stdout.flush()
+        time.sleep(0.1)  
+    print("\nCompleted!")
+#------------------------------------------------
 
 def main():
     
@@ -27,24 +42,55 @@ def main():
     
     logger.info('-----------------------------------------------------------')
     logger.info('------- Lancement du programme ----------------------------')
-    
+
+    print(is_rclone_installed())
+
     if  is_rclone_installed()  is False: # Check if rclone is installed
-        print("Rclone n'est pas installé !")
+        ic("Rclone is not installed")
+        logger.error('Rclone is not installed')
+    else:
+        ic("Rclone is installed")
+        logger.info('Rclone is installed')
+        ic(rclone.version())  # Get the version of rclone
+        ic(rclone.get_remotes())  # Get a list of available remotes
+        
+    while True: # Main menu - Permet de boucler dans l'application
+        answer = inquirer.select(
+            "Choisir une action",
+            choices=["Remotes existants","Nouveau Remote","Start Progress Bar", "Exit"] # Menu principal
+        ).execute()
 
-    fav_lang = inquirer.select(
-        message = "What's your favorite language:",
-        choices = ["Prout", "Kotlin", "Python", "Rust", "Java", "JavaScript"]
-    ).execute()  # Prompt the user to select a favorite language
+        logger.info(f"Choix dans le menu:  {answer} ")  # Logue la réponse sélectionnée
 
-    print(f"Your favorite language is {fav_lang}")  # Print the selected language   
+        if answer == "Start Progress Bar":
+            progress_bar()
+
+        elif answer == "Exit": # Quitter l'application
+            print("Goodbye!")
+            break
+
+    """ fav_lang = inquirer.select(
+        message = "Choisir une action:",
+        choices = ["Remotes existants","Nouveau Remote",  "Kotlin", "Python", "Rust", "Java", "JavaScript"],
+        style={"questionmark": "#ff9d00 bold"},
+        vi_mode=True,
+        style_override=False,
+    ).execute()  # Prompt the user to select a favorite language """
+
+    print(f"La réponse est {answer}")  # Print the selected language   
 
 def is_rclone_installed(): # Check if rclone is installed
-    if rclone.is_installed():
-        print("Rclone is installed")
+    try:
+        subprocess.check_output(["rclone", "--version"])
         return True
-    else:
-        #print("Rclone n'est pas installé !")
+    except FileNotFoundError:
         return False
+
+    
+
+    
+#-------------------------------------------------------------------------------------------
+#-------------------------------------------------------------------------------------------
 
 if __name__ == "__main__":
         main()
