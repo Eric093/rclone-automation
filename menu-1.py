@@ -6,6 +6,8 @@ import subprocess
 asyncio.set_event_loop_policy(asyncio.WindowsSelectorEventLoopPolicy()) """
 
 from InquirerPy import inquirer  # Import the inquirer module
+from InquirerPy.base.control import Choice
+from InquirerPy.separator import Separator
 #from rclone_python import rclone  # Import the rclone module  !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 import logging  ##!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 #logging.basicConfig(filename="fichier.log", level=logging.DEBUG)
@@ -16,11 +18,11 @@ logging.basicConfig(filename='log/programlog.log', level=logging.DEBUG, encoding
 
 from rclone_python import rclone  # Import the rclone module
 
-logger = logging.getLogger(__name__)
+logger = logging.getLogger(__name__)  # LOG:
 
 from icecream import ic # Outil de debug
 ## Paramétrage d'icecream -----------------------
-ic.configureOutput(prefix=f'IC Debug | ', includeContext=True)
+ic.configureOutput(prefix=f'IC Debug | ', includeContext=True) # DEBUG:
 #------------------------------------------------
 
 import time
@@ -43,24 +45,36 @@ def main():
     logger.info('-----------------------------------------------------------')
     logger.info('------- Lancement du programme ----------------------------')
 
-    print(is_rclone_installed())
+    print(is_rclone_installed())                # DEBUG:
 
     if  is_rclone_installed()  is False: # Check if rclone is installed
-        ic("Rclone is not installed")
-        logger.error('Rclone is not installed')
+        ic("Rclone is not installed")   # DEBUG: 
+        logger.error('Rclone is not installed')   # LOG:
     else:
-        ic("Rclone is installed")
-        logger.info('Rclone is installed')
-        ic(rclone.version())  # Get the version of rclone
-        ic(rclone.get_remotes())  # Get a list of available remotes
+        ic("Rclone is installed")   # DEBUG:
+        logger.info('Rclone is installed')   # LOG:
+        ic(rclone.version())  # Get the version of rclone # DEBUG:
+        ic(rclone.get_remotes())  # Get a list of available remotes # DEBUG:
         
     while True: # Main menu - Permet de boucler dans l'application
-        answer = inquirer.select(
-            "Choisir une action",
-            choices=["Remotes existants","Nouveau Remote","Start Progress Bar", "Exit"] # Menu principal
+        answer = inquirer.select("Choisir une action",      # Menu principal
+        choices=["Remotes existants",
+                "Nouveau Remote",
+                "Start Progress Bar",
+                Choice(value="Exit", name="Exit"),
+                ] 
+                ,default="Exit", # Entrée sélectionnée par défaut
         ).execute()
 
-        logger.info(f"Choix dans le menu:  {answer} ")  # Logue la réponse sélectionnée
+        logger.info(f"Choix dans le menu:  {answer} ")  # Logue la réponse sélectionnée  LOG:
+
+        if answer == "Remotes existants": # Affiche les remotes existants
+            ic(rclone.get_remotes())  # DEBUG:
+            logger.info(f"Remotes existants:  {rclone.get_remotes()} ")  # Logue la réponse sélectionnée  LOG:
+            remotes_tab = rclone.get_remotes() # Stocke les remotes existants dans un tableau
+            print(remotes_tab) # Affiche les remotes existants  DEBUG:
+
+
 
         if answer == "Start Progress Bar":
             progress_bar()

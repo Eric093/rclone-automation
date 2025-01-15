@@ -1,37 +1,31 @@
- 2025-01-15 10:15:03,988 - INFO -  -----------------------------------------------------------
- 2025-01-15 10:15:03,988 - INFO -  ------- Lancement du programme ----------------------------
- 2025-01-15 10:15:04,202 - INFO -  Rclone is installed
- 2025-01-15 10:15:04,475 - DEBUG -  Using proactor: IocpProactor
- 2025-01-15 10:17:32,007 - INFO -  -----------------------------------------------------------
- 2025-01-15 10:17:32,007 - INFO -  ------- Lancement du programme ----------------------------
- 2025-01-15 10:17:32,223 - INFO -  Rclone is installed
- 2025-01-15 10:17:32,512 - DEBUG -  Using proactor: IocpProactor
- 2025-01-15 10:17:58,499 - INFO -  -----------------------------------------------------------
- 2025-01-15 10:17:58,499 - INFO -  ------- Lancement du programme ----------------------------
- 2025-01-15 10:17:58,713 - INFO -  Rclone is installed
- 2025-01-15 10:17:58,972 - DEBUG -  Using proactor: IocpProactor
- 2025-01-15 10:20:39,458 - INFO -  -----------------------------------------------------------
- 2025-01-15 10:20:39,458 - INFO -  ------- Lancement du programme ----------------------------
- 2025-01-15 10:20:39,664 - INFO -  Rclone is installed
- 2025-01-15 10:29:37,133 - INFO -  -----------------------------------------------------------
- 2025-01-15 10:29:37,133 - INFO -  ------- Lancement du programme ----------------------------
- 2025-01-15 10:29:37,337 - INFO -  Rclone is installed
- 2025-01-15 10:29:37,603 - DEBUG -  Using proactor: IocpProactor
- 2025-01-15 10:29:52,415 - DEBUG -  Using proactor: IocpProactor
- 2025-01-15 10:31:16,281 - INFO -  -----------------------------------------------------------
- 2025-01-15 10:31:16,281 - INFO -  ------- Lancement du programme ----------------------------
- 2025-01-15 10:31:16,484 - INFO -  Rclone is installed
- 2025-01-15 10:31:16,741 - DEBUG -  Using proactor: IocpProactor
- 2025-01-15 10:31:21,147 - DEBUG -  Using proactor: IocpProactor
- 2025-01-15 10:34:25,154 - INFO -  -----------------------------------------------------------
- 2025-01-15 10:34:25,154 - INFO -  ------- Lancement du programme ----------------------------
- 2025-01-15 10:34:25,366 - INFO -  Rclone is installed
- 2025-01-15 10:34:25,618 - DEBUG -  Using proactor: IocpProactor
- 2025-01-15 10:34:27,019 - INFO -  La réponse est Remotes existants
- 2025-01-15 10:34:27,023 - DEBUG -  Using proactor: IocpProactor
- 2025-01-15 10:34:32,703 - INFO -  La réponse est Exit
- 2025-01-15 10:36:07,306 - INFO -  -----------------------------------------------------------
- 2025-01-15 10:36:07,306 - INFO -  ------- Lancement du programme ----------------------------
- 2025-01-15 10:36:07,522 - INFO -  Rclone is installed
- 2025-01-15 10:36:07,783 - DEBUG -  Using proactor: IocpProactor
- 2025-01-15 10:36:10,977 - INFO -  Choix dans le menu: I Exit I
+ 2025-01-15 16:00:31,341 - INFO -  -----------------------------------------------------------
+ 2025-01-15 16:00:31,341 - INFO -  ------- Lancement du programme ----------------------------
+ 2025-01-15 16:00:31,689 - INFO -  Rclone is installed
+ 2025-01-15 16:00:31,986 - DEBUG -  Using proactor: IocpProactor
+ 2025-01-15 16:00:36,338 - INFO -  Choix dans le menu:  Remotes existants 
+ 2025-01-15 16:00:36,346 - DEBUG -  Using proactor: IocpProactor
+ 2025-01-15 16:00:38,623 - INFO -  Choix dans le menu:  Exit 
+ 2025-01-15 16:02:29,444 - INFO -  -----------------------------------------------------------
+ 2025-01-15 16:02:29,444 - INFO -  ------- Lancement du programme ----------------------------
+ 2025-01-15 16:02:29,664 - INFO -  Rclone is installed
+ 2025-01-15 16:02:29,950 - DEBUG -  Using proactor: IocpProactor
+ 2025-01-15 16:02:34,621 - INFO -  Choix dans le menu:  Remotes existants 
+ 2025-01-15 16:02:34,885 - INFO -  Remotes existants:  ['Zaclys:'] 
+ 2025-01-15 16:02:34,890 - DEBUG -  Using proactor: IocpProactor
+ 2025-01-15 16:06:42,434 - INFO -  Choix dans le menu:  Exit 
+ 2025-01-15 16:07:51,918 - INFO -  -----------------------------------------------------------
+ 2025-01-15 16:07:51,919 - INFO -  ------- Lancement du programme ----------------------------
+ 2025-01-15 16:07:52,129 - INFO -  Rclone is installed
+ 2025-01-15 16:07:52,389 - DEBUG -  Using proactor: IocpProactor
+ 2025-01-15 16:07:55,614 - INFO -  Choix dans le menu:  Remotes existants 
+ 2025-01-15 16:07:55,857 - INFO -  Remotes existants:  ['Zaclys:'] 
+ 2025-01-15 16:07:55,989 - DEBUG -  Using proactor: IocpProactor
+ 2025-01-15 16:08:09,962 - INFO -  Choix dans le menu:  Exit 
+ 2025-01-15 16:14:13,559 - INFO -  -----------------------------------------------------------
+ 2025-01-15 16:14:13,559 - INFO -  ------- Lancement du programme ----------------------------
+ 2025-01-15 16:14:13,763 - INFO -  Rclone is installed
+ 2025-01-15 16:14:14,021 - DEBUG -  Using proactor: IocpProactor
+ 2025-01-15 16:14:18,054 - INFO -  Choix dans le menu:  Remotes existants 
+ 2025-01-15 16:14:18,288 - INFO -  Remotes existants:  ['Zaclys:', 'OneDrive:'] 
+ 2025-01-15 16:14:18,401 - DEBUG -  Using proactor: IocpProactor
+ 2025-01-15 16:16:42,256 - INFO -  Choix dans le menu:  Exit 

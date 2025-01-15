@@ -23,4 +23,6 @@ if not is_installed():
     
 #print(rclone.version())  # Get the version of rclone
 
-print(rclone.get_remotes())  # Get a list of available remotes
+toto=rclone.get_remotes() # Get a list of available remotes
+print(toto)
+
