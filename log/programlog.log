@@ -29,3 +29,17 @@
  2025-01-15 16:14:18,288 - INFO -  Remotes existants:  ['Zaclys:', 'OneDrive:'] 
  2025-01-15 16:14:18,401 - DEBUG -  Using proactor: IocpProactor
  2025-01-15 16:16:42,256 - INFO -  Choix dans le menu:  Exit 
+ 2025-01-16 16:38:52,545 - INFO -  -----------------------------------------------------------
+ 2025-01-16 16:38:52,547 - INFO -  ------- Lancement du programme ----------------------------
+ 2025-01-16 16:38:53,173 - INFO -  Rclone is installed
+ 2025-01-16 16:38:53,625 - DEBUG -  Using proactor: IocpProactor
+ 2025-01-16 16:39:32,621 - INFO -  Choix dans le menu:  Exit 
+ 2025-01-16 16:41:08,204 - INFO -  -----------------------------------------------------------
+ 2025-01-16 16:41:08,204 - INFO -  ------- Lancement du programme ----------------------------
+ 2025-01-16 16:41:09,200 - DEBUG -  Using proactor: IocpProactor
+ 2025-01-16 16:42:42,306 - INFO -  Choix dans le menu:  Exit 
+ 2025-01-16 16:42:44,867 - INFO -  -----------------------------------------------------------
+ 2025-01-16 16:42:44,868 - INFO -  ------- Lancement du programme ----------------------------
+ 2025-01-16 16:42:45,347 - INFO -  Rclone is installed, version: v1.68.2
+ 2025-01-16 16:42:45,661 - DEBUG -  Using proactor: IocpProactor
+ 2025-01-16 16:42:52,319 - INFO -  Choix dans le menu:  Exit 

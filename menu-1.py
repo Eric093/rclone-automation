@@ -52,7 +52,7 @@ def main():
         logger.error('Rclone is not installed')   # LOG:
     else:
         ic("Rclone is installed")   # DEBUG:
-        logger.info('Rclone is installed')   # LOG:
+        logger.info(f'Rclone is installed, version: {rclone.version()}')   # LOG:
         ic(rclone.version())  # Get the version of rclone # DEBUG:
         ic(rclone.get_remotes())  # Get a list of available remotes # DEBUG:
         
