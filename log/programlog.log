@@ -44,6 +44,7 @@
  2025-01-16 16:42:45,661 - DEBUG -  Using proactor: IocpProactor
  2025-01-16 16:42:52,319 - INFO -  Choix dans le menu:  Exit 
 <<<<<<< HEAD
+<<<<<<< HEAD
  2025-01-21 09:42:40,785 - INFO -  -----------------------------------------------------------
  2025-01-21 09:42:40,786 - INFO -  ------- Lancement du programme ----------------------------
  2025-01-21 09:42:41,228 - INFO -  Rclone is installed, version: v1.68.2
@@ -86,5 +87,7 @@
  2025-01-21 10:48:18,215 - INFO -  Remotes existants:  ['Zaclys:', 'OneDrive:'] 
  2025-01-21 10:48:18,352 - DEBUG -  Using proactor: IocpProactor
  2025-01-21 10:57:53,728 - INFO -  Choix dans le menu:  Exit 
+=======
+>>>>>>> parent of f5c152b (gitignore)
 =======
 >>>>>>> parent of f5c152b (gitignore)
