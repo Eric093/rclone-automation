@@ -84,3 +84,4 @@
  2025-01-21 10:48:17,967 - INFO -  Choix dans le menu:  Remotes existants 
  2025-01-21 10:48:18,215 - INFO -  Remotes existants:  ['Zaclys:', 'OneDrive:'] 
  2025-01-21 10:48:18,352 - DEBUG -  Using proactor: IocpProactor
+ 2025-01-21 10:57:53,728 - INFO -  Choix dans le menu:  Exit 
