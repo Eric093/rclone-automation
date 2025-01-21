@@ -17,4 +17,3 @@ Pour avoir le fichier de config dans le dossier de rclone:
     
 - 	MacOS: créer le fichier rclone.config dans le dossier de l'appli. Puis la commande est:  `./rclone config --config="rclone.conf"`
 
-Emplacement rclone sous Windows (dans le path): C:\Users\User\AppData\Local\Microsoft\WinGet\Packages\Rclone.Rclone_Microsoft.Winget.Source_8wekyb3d8bbwe\rclone-v1.68.2-windows-amd64
